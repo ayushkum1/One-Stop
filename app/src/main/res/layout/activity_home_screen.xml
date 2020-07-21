@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.HomeScreen">
+
+    <ImageButton
+        android:id="@+id/cake_ib"
+        style="@style/CustomImageButton"
+        android:src="@drawable/cake"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/shoe_ib"/>
+
+    <ImageButton
+        android:id="@+id/shoe_ib"
+        style="@style/CustomImageButton"
+        android:src="@drawable/shoes"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/stationery_ib"
+        style="@style/CustomImageButton"
+        android:src="@drawable/stationery"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/cake_ib"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/cloth_ib"
+        style="@style/CustomImageButton"
+        android:src="@drawable/clothes"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/stationery_ib"
+        app:layout_constraintTop_toBottomOf="@+id/shoe_ib"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

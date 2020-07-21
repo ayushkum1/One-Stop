@@ -1,0 +1,184 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/grey</item>
+        <item name="colorPrimaryDark">@color/grey</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:actionBarSize">40dp</item>
+    </style>
+
+<!--    Common Style-->
+
+    <style name="CustomButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/grey_button</item>
+    </style>
+
+    <style name="ViewLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#DAD8D8</item>
+    </style>
+
+
+    <!--    Login Screen -->
+
+    <style name="LinearLayout">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="TextAppearance" parent="TextAppearance.AppCompat">
+<!--        define size, no. of lines as per reuirement-->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WelcomeTV" parent="Widget.AppCompat.TextView">
+        <item name="android:textAppearance">@style/TextAppearance</item>
+        <item name="background">@null</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="WelcomeImage">
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:src">@drawable/ic_sampl_welcome</item>
+    </style>
+
+    <style name="LoginTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textAppearance">@style/TextAppearance</item>
+        <item name="android:textColor">#FF3A3838</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="LoginEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/grey_border</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="LoginImageButtons" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/grey_border</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+<!--    Singup screen-->
+    <style name="HeaderTV" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_margin">30dp</item>
+        <item name="android:textAppearance">@style/TextAppearance</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="SignupTV" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@null</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SignupET" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/grey_border</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+<!--    OTP Verification Screen-->
+    <style name="customOTPEditText" parent="@android:style/Widget.EditText">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="titleTextColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:inputType">numberPassword</item>
+    </style>
+
+<!--    Success Screen-->
+
+    <style name="SuccessImageView">
+        <item name="android:src">@drawable/tick</item>
+        <item name="android:layout_marginTop">70dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+<!--    Home Screen-->
+
+    <style name="CustomImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/grey_border</item>
+        <item name="android:layout_width">125dp</item>
+        <item name="android:layout_height">125dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+<!--    Main Activity-->
+
+    <style name="LineGrey">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+
+    <style name="ProductTV" parent="Widget.AppCompat.TextView">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+<!--    Edit Profile-->
+    <style name="ProfileHeaderTV" parent="Widget.AppCompat.TextView">
+        <item name="android:padding">5dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+    </style>
+
+    <style name="RoundImageView">
+        <item name="android:shape">ring</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">50dp</item>
+    </style>
+</resources>

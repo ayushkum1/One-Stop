@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile.ProfileScreen">
+
+    <TextView
+        android:id="@+id/header_tv"
+        android:text="@string/edit_profile"
+        style="@style/ProfileHeaderTV"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_tv">
+
+        <LinearLayout
+            android:id="@+id/fname_ll"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                style="@style/ViewLine"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/first_name"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/fname_tv"
+                        android:text="@string/first_name"
+                        android:padding="5dp"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/fname_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:src="@drawable/arrow_design"
+                    android:layout_gravity="end"/>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                style="@style/ViewLine"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lname_ll"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                style="@style/ViewLine"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/last_name"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/lname_tv"
+                        android:text="@string/last_name"
+                        android:textColor="#000"
+                        android:padding="5dp"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <ImageButton
+                    android:id="@+id/lname_btn"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/arrow_design"
+                    android:background="@color/transparent"
+                    android:layout_gravity="end"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                style="@style/ViewLine"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/phone_no_ll"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                style="@style/ViewLine"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical"
+                        android:layout_width="200dp"
+                        android:layout_height="60dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/phone"
+                            android:textSize="15sp"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/phone_no_tv"
+                            android:text="@string/example_phoneNo"
+                            android:textColor="#000"
+                            android:padding="5dp"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="@string/verified"
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="end|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <ImageButton
+                    android:id="@+id/phone_btn"
+                    android:layout_width="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/arrow_design"
+                    android:background="@color/transparent"
+                    android:layout_gravity="end"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                style="@style/ViewLine"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/email_ll"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                style="@style/ViewLine"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <LinearLayout
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/e_mail"
+                            android:textSize="15sp"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/email_tv"
+                            android:text="@string/example_email"
+                            android:textColor="#000"
+                            android:padding="5dp"
+                            android:textSize="19sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="@string/verified"
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="end|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                style="@style/ViewLine"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adhaar_ll"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                style="@style/ViewLine"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/add_profile_photo"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/profile_picture_tv"
+                        android:text="@string/example_profile_pic"
+                        android:textColor="#000"
+                        android:padding="5dp"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <ImageButton
+                    android:id="@+id/profile_picture_btn"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/arrow_design"
+                    android:background="@color/transparent"
+                    android:layout_gravity="end"/>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                style="@style/ViewLine"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

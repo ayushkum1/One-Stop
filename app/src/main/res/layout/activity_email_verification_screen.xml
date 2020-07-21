@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Verification.EmailVerificationScreen">
+
+    <LinearLayout
+        android:id="@+id/otp_heading_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:text="@string/otp"
+            style="@style/TextAppearance"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"/>
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:text="@string/enter_otp"
+            android:textSize="20sp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/otp_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_heading_ll">
+
+        <EditText
+            android:id="@+id/otp_et_1"
+            style="@style/customOTPEditText"
+            android:background="@drawable/grey_border"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp" />
+
+        <EditText
+            android:id="@+id/otp_et_2"
+            style="@style/customOTPEditText"
+            android:background="@drawable/grey_border"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <EditText
+            android:id="@+id/otp_et_3"
+            style="@style/customOTPEditText"
+            android:background="@drawable/grey_border"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <EditText
+            android:id="@+id/otp_et_4"
+            style="@style/customOTPEditText"
+            android:background="@drawable/grey_border"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_ll"
+        android:layout_margin="40dp">
+
+        <TextView
+            android:id="@+id/timer_tv"
+            android:text="0:00 sec"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/resend_tv"
+            android:text="@string/resend"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/verify_button"
+        style="@style/CustomButton"
+        android:text="@string/verify"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
