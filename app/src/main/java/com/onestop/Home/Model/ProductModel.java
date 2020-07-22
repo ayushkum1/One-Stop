@@ -1,16 +1,17 @@
 package com.onestop.Home.Model;
 
 public class ProductModel {
-    private String productName, productPrice, productDescription, productPhoto;
+    private String productName, productPrice, productDescription, productPhoto, productWeight;
 
     public ProductModel() {
     }
 
-    public ProductModel(String productName, String productPrice, String productDescription, String productPhoto) {
+    public ProductModel(String productName, String productPrice, String productDescription, String productPhoto, String productWeight) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.productDescription = productDescription;
         this.productPhoto = productPhoto;
+        this.productWeight = productWeight;
     }
 
     public String getProductName() {
@@ -43,5 +44,13 @@ public class ProductModel {
 
     public void setProductPhoto(String productPhoto) {
         this.productPhoto = productPhoto;
+    }
+
+    public String getProductWeight() {
+        return productWeight;
+    }
+
+    public void setProductWeight(String productWeight) {
+        this.productWeight = productWeight;
     }
 }
