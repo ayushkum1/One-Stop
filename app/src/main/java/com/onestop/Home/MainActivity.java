@@ -22,11 +22,15 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.onestop.Cart.CartScreen;
+import com.onestop.Help.HelpScreen;
 import com.onestop.Home.Model.ProductModel;
 import com.onestop.Home.Utils.ProductAdapter;
+import com.onestop.Order.MyOrderScreen;
 import com.onestop.Profile.ProfileScreen;
 import com.onestop.R;
+import com.onestop.SampleExample;
 import com.onestop.SearchResultScreen;
+import com.onestop.Setting.SettingScreen;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -44,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rvProduct;
     List<ProductModel> productList = new ArrayList<>();
     ProductAdapter adapter;
+    SampleExample sample = new SampleExample();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,13 +89,15 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.help:
-                        startActivity(new Intent(MainActivity.this, HomeScreen.class));
-                        Toast.makeText(MainActivity.this, "help", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, HelpScreen.class));
                         break;
 
                     case  R.id.settings:
-                        Toast.makeText(MainActivity.this, "setting", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, SettingScreen.class));
                         break;
+
+                    case R.id.orders:
+                        startActivity(new Intent(MainActivity.this, MyOrderScreen.class));
                 }
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
@@ -100,54 +107,7 @@ public class MainActivity extends AppCompatActivity {
         //recycler view
         rvProduct = findViewById(R.id.product_rv);
 
-        ProductModel pm1 = new ProductModel("Black Forest",
-                "Rs. 500",
-                "As its name implies, Black Forest Cake comes from the Black Forest region of Germany.\n",
-                "https://www.lifeloveandsugar.com/wp-content/uploads/2015/02/Chocolate-Oreo-Cake2.jpg", "1 kg");
-
-        ProductModel pm2 = new ProductModel("Black Forest",
-                "Rs. 500",
-                "As its name implies, Black Forest Cake comes from the Black Forest region of Germany.\n",
-                "https://img.floweraura.com/sites/default/files/Blackforest-cake-2Kg-eggless-A.jpg", "1kg");
-
-        ProductModel pm3 = new ProductModel("Black Forest",
-                "Rs. 500",
-                "As its name implies, Black Forest Cake comes from the Black Forest region of Germany.\n",
-                "https://www.lifeloveandsugar.com/wp-content/uploads/2015/02/Chocolate-Oreo-Cake2.jpg", "1 kg");
-
-        ProductModel pm4 = new ProductModel("Black Forest",
-                "Rs. 500",
-                "As its name implies, Black Forest Cake comes from the Black Forest region of Germany.\n",
-                "https://img.floweraura.com/sites/default/files/Blackforest-cake-2Kg-eggless-A.jpg", "1kg");
-
-        ProductModel pm5 = new ProductModel("Classic Cake",
-                "Rs. 400",
-                "As its name implies, Black Forest Cake comes from the Black Forest region of Germany.\n",
-                "https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/carrot-cake.jpg", "1kg");
-
-        ProductModel pm6 = new ProductModel("Pink Drip Cake",
-                "Rs. 500",
-                "As its name implies, Black Forest Cake comes from the Black Forest region of Germany.\n",
-                "https://chelsweets.com/wp-content/uploads/2019/04/IMG_1029-2-735x1103.jpg", "1kg");
-
-        ProductModel pm7 = new ProductModel("Party Cake",
-                "Rs. 700",
-                "As its name implies, Black Forest Cake comes from the Black Forest region of Germany.\n",
-                "https://www.pamperedchef.com/iceberg/com/recipe/1125065-lg.jpg", "1kg");
-
-        ProductModel pm8 = new ProductModel("Strawberry Cake",
-                "Rs. 500",
-                "As its name implies, Black Forest Cake comes from the Black Forest region of Germany.\n",
-                "https://sugargeekshow.com/wp-content/uploads/2019/07/fresh-strawberry-cake-5.jpg", "1kg");
-
-        productList.add(pm1);
-        productList.add(pm2);
-        productList.add(pm3);
-        productList.add(pm4);
-        productList.add(pm5);
-        productList.add(pm6);
-        productList.add(pm7);
-        productList.add(pm8);
+        productList = sample.getProductList();
 
         rvProduct.setLayoutManager(new LinearLayoutManager(this));
         adapter = new ProductAdapter(MainActivity.this, productList);

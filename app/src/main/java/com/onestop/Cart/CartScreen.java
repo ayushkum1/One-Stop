@@ -2,8 +2,6 @@ package com.onestop.Cart;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,10 +12,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.onestop.Cart.Utils.CartAdapter;
-import com.onestop.Home.MainActivity;
 import com.onestop.Home.Model.ProductModel;
-import com.onestop.Home.Utils.ProductAdapter;
-import com.onestop.Order.OrderScreen;
+import com.onestop.Order.MyOrderScreen;
 import com.onestop.R;
 
 import java.util.ArrayList;
@@ -45,7 +41,7 @@ public class CartScreen extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CartScreen.this, OrderScreen.class));
+                startActivity(new Intent(CartScreen.this, MyOrderScreen.class));
             }
         });
 

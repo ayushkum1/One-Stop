@@ -9,7 +9,26 @@
         <item name="android:actionBarSize">40dp</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
 <!--    Common Style-->
+    
+    <style name="RectangleOvalShape">
+        <item name="android:background">@drawable/rectangle_oval_shape</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ToolBarButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
 
     <style name="CustomButton" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">match_parent</item>
@@ -213,6 +232,65 @@
         <item name="android:layout_height">30dp</item>
         <item name="android:layout_width">30dp</item>
         <item name="android:background">@drawable/grey_border</item>
+    </style>
+
+<!--    My Order-->
+    <style name="MyOrderScreenSetting">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+<!--    Help Screen-->
+    <style name="HelpIV">
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:background">@drawable/help_image_border</item>
+    </style>
+
+    <style name="HelpTV" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_marginTop">60dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+    </style>
+
+    <style name="HelpSubTV" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lines">2</item>
+    </style>
+
+<!--    Setting Screen-->
+    <style name="SettingTV" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+    </style>
+
+    <style name="SettingIB" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:background">@drawable/help_image_border</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
     </style>
 
 </resources>

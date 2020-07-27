@@ -53,4 +53,5 @@ public class ProductModel {
     public void setProductWeight(String productWeight) {
         this.productWeight = productWeight;
     }
+
 }

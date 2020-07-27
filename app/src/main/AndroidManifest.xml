@@ -11,7 +11,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Order.OrderScreen"></activity>
+        <activity android:name=".ChooseLanguage.Utils.LanguageAdapter"></activity>
+        <activity android:name=".Home.MainActivity" />
+        <activity android:name=".ChooseLanguage.ChooseLanguageScreen" />
+        <activity
+            android:name=".Setting.SettingScreen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Help.HelpScreen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Payment.SelectPaymentOptionScreen" />
+        <activity android:name=".Order.Utils.OrderAdapter" />
+        <activity
+            android:name=".ProductDetail.ProductDetailScreen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Order.MyOrderScreen"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Cart.Utils.CartAdapter" />
         <activity android:name=".Cart.CartScreen" />
         <activity android:name=".Profile.VerifyScreen" />
@@ -24,12 +40,12 @@
         <activity android:name=".Verification.EmailVerificationScreen" />
         <activity android:name=".SignUp.SignupScreen" />
         <activity android:name=".Home.HomeScreen" />
-        <activity android:name=".Home.MainActivity">
+        <activity android:name=".Login.LoginScreen">
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".Login.LoginScreen">
+        <activity android:name=".Address.AddressScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

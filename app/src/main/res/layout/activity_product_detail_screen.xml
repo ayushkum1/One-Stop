@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetail.ProductDetailScreen">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/cart_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp">
+
+                <ImageButton
+                    android:id="@+id/back_ib"
+                    style="@style/ToolBarButton"
+                    android:src="@drawable/back_arrow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                    android:id="@+id/product_name"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/cart_ib"
+                    app:layout_constraintLeft_toRightOf="@+id/back_ib"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/cart_ib"
+                    android:src="@drawable/shopping_cart"
+                    style="@style/ToolBarButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+<!--    rest activity body-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_cardview"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cart_appbar">
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/product_price_tv"
+        style="@style/RectangleOvalShape"
+        android:text="Rs. 900"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_cardview"/>
+
+    <Button
+        android:id="@+id/plus_btn"
+        android:text="@string/plus"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        style="@style/CountImageButton"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintRight_toLeftOf="@+id/count_tv"
+        app:layout_constraintTop_toBottomOf="@id/image_cardview"/>
+
+    <TextView
+        android:id="@+id/count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:text="  1  "
+        android:textSize="20sp"
+        app:layout_constraintRight_toLeftOf="@+id/minus_btn"
+        app:layout_constraintTop_toBottomOf="@+id/image_cardview"/>
+
+    <Button
+        android:id="@+id/minus_btn"
+        android:text="@string/minus"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        style="@style/CountImageButton"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        android:src="@drawable/minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_cardview"
+        app:layout_constraintLeft_toRightOf="@+id/count_tv"/>
+
+    <TextView
+        android:id="@+id/product_description_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:lines="5"
+        android:paddingLeft="30dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/product_price_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:id="@+id/description_line_bottom"
+        style="@style/LineGrey"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/product_description_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/product_weight_tv"
+        android:textSize="15sp"
+        android:text="1 KG"
+        android:gravity="center"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/grey_border"
+        android:layout_marginTop="10dp"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/description_line_bottom"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <Button
+        android:id="@+id/add_to_cart_btn"
+        style="@style/RectangleOvalShape"
+        android:text="Add to Cart"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/product_weight_tv"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/buy_now_btn"
+        style="@style/RectangleOvalShape"
+        android:text="Buy Now"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rectangle_oval_shape"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/product_weight_tv"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,7 +31,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     @NonNull
     @Override
     public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new CartViewHolder(LayoutInflater.from(context).inflate(R.layout.activity_cart_adapter_view, parent, false));
+        return new CartViewHolder(LayoutInflater.from(context).inflate(R.layout.cart_adapter_view, parent, false));
     }
 
     @Override
@@ -74,7 +74,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
             super(itemView);
             tvProductName = itemView.findViewById(R.id.name_tv);
             tvProductPrice = itemView.findViewById(R.id.price_tv);
-            tvProductWeight = itemView.findViewById(R.id.weight_tv);
+            tvProductWeight = itemView.findViewById(R.id.product_weight_tv);
             tvCount = itemView.findViewById(R.id.count_tv);
 
             ivProductPhoto = itemView.findViewById(R.id.product_image_iv);
