@@ -13,8 +13,7 @@ import android.widget.TextView;
 import com.onestop.Address.AddressScreen;
 import com.onestop.ChooseLanguage.ChooseLanguageScreen;
 import com.onestop.Login.LoginScreen;
-import com.onestop.Profile.EditProfileScreen;
-import com.onestop.Profile.ProfileScreen;
+import com.onestop.UserProfile.ProfileScreen;
 import com.onestop.R;
 
 public class SettingScreen extends AppCompatActivity {

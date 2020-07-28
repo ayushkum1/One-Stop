@@ -18,7 +18,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.onestop.Cart.CartScreen;
@@ -26,7 +25,7 @@ import com.onestop.Help.HelpScreen;
 import com.onestop.Home.Model.ProductModel;
 import com.onestop.Home.Utils.ProductAdapter;
 import com.onestop.Order.MyOrderScreen;
-import com.onestop.Profile.ProfileScreen;
+import com.onestop.UserProfile.ProfileScreen;
 import com.onestop.R;
 import com.onestop.SampleExample;
 import com.onestop.SearchResultScreen;

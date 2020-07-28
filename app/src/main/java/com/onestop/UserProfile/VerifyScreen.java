@@ -1,4 +1,4 @@
-package com.onestop.Profile;
+package com.onestop.UserProfile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.onestop.Home.HomeScreen;
 import com.onestop.Home.MainActivity;
 import com.onestop.R;
 

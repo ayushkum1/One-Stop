@@ -1,4 +1,4 @@
-package com.onestop.Profile;
+package com.onestop.UserProfile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,18 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.onestop.Home.HomeScreen;
 import com.onestop.Home.MainActivity;
 import com.onestop.R;
 
 public class EditProfileScreen extends AppCompatActivity {
 
-    TextView tvHeading, tvName;
+    TextView tvHeading, tvName, tvTitle;
     EditText etFieldName;
     Button btnNext;
+    ImageButton ibBack;
 
     String fieldname, customerfield;
 
@@ -31,6 +32,11 @@ public class EditProfileScreen extends AppCompatActivity {
         tvName = findViewById(R.id.field_name_tv);
         etFieldName = findViewById(R.id.field_et);
         btnNext = findViewById(R.id.next_btn);
+
+        tvTitle = findViewById(R.id.title_tv);
+        ibBack = findViewById(R.id.back_ib);
+
+        tvTitle.setText(R.string.edit_profile);
 
         Intent editIntent = getIntent();
         fieldname = editIntent.getStringExtra("fieldnameTV");
@@ -66,5 +72,13 @@ public class EditProfileScreen extends AppCompatActivity {
                 }
             });
         }
+
+        ibBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
     }
 }

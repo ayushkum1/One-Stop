@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    tools:context=".Address.Utils.AddressAdapter">
+
+    <TextView
+        android:id="@+id/name_tv"
+        style="@style/AddressAdapterTV"
+        android:text="@string/name"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <ImageButton
+        android:id="@+id/more_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/more_button"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/address_type_tv"
+        style="@style/AddressAdapterTV"
+        android:text="@string/home"
+        android:background="@color/activity_background_color"
+        app:layout_constraintTop_toBottomOf="@+id/name_tv"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/address_tv"
+        style="@style/AddressAdapterTV"
+        android:lines="4"
+        android:layout_width="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_type_tv"/>
+
+    <TextView
+        android:id="@+id/phone_no_tv"
+        style="@style/AddressAdapterTV"
+        android:text="@string/example_phoneNo"
+        android:textStyle="bold"
+        android:paddingBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_tv"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

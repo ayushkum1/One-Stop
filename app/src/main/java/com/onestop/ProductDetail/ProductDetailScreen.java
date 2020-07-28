@@ -103,7 +103,8 @@ public class ProductDetailScreen extends AppCompatActivity implements BaseSlider
         btnBuyNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ProductDetailScreen.this, MyOrderScreen.class));
+//                startActivity(new Intent(ProductDetailScreen.this, MyOrderScreen.class));
+                Toast.makeText(ProductDetailScreen.this, "Buy Options", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -11,4 +11,5 @@
     <color name="white">#FFFFFF</color>
     <color name="light_grey">#B5B5B5</color>
     <color name="green">#38CC04</color>
+    <color name="activity_background_color">#EFE9E9</color>
 </resources>

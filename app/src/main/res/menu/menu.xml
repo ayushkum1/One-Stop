@@ -4,23 +4,22 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
         <item
             android:id="@+id/cart"
             android:title="@string/cart"/>
+
         <item
             android:id="@+id/help"
             android:title="@string/help"/>
+
         <item
             android:id="@+id/settings"
             android:title="@string/settings"/>
-        <item
-            android:id="@+id/wallet"
-            android:title="@string/wallet"/>
-        <item
-            android:id="@+id/payment"
-            android:title="@string/payment"/>
+
         <item
             android:id="@+id/orders"
             android:title="@string/my_orders"/>
+
     </group>
 </menu>
