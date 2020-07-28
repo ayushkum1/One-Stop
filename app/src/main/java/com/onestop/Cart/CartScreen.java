@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.onestop.Cart.Utils.CartAdapter;
 import com.onestop.Home.Model.ProductModel;
 import com.onestop.Order.MyOrderScreen;
+import com.onestop.Payment.SelectPaymentOptionScreen;
 import com.onestop.R;
 
 import java.util.ArrayList;
@@ -42,8 +43,7 @@ public class CartScreen extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(CartScreen.this, "Payment Options", Toast.LENGTH_SHORT).show();
-//                startActivity(new Intent(CartScreen.this, MyOrderScreen.class));
+                startActivity(new Intent(CartScreen.this, SelectPaymentOptionScreen.class));
             }
         });
 

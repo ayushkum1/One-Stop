@@ -24,7 +24,8 @@
         <activity
             android:name=".Help.HelpScreen"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Payment.SelectPaymentOptionScreen" />
+        <activity android:name=".Payment.SelectPaymentOptionScreen"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".Order.Utils.OrderAdapter" />
         <activity
             android:name=".ProductDetail.ProductDetailScreen"

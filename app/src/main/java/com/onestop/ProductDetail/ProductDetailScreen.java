@@ -19,6 +19,7 @@ import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.onestop.Cart.CartScreen;
 import com.onestop.Order.MyOrderScreen;
+import com.onestop.Payment.SelectPaymentOptionScreen;
 import com.onestop.R;
 
 import java.util.HashMap;
@@ -103,8 +104,7 @@ public class ProductDetailScreen extends AppCompatActivity implements BaseSlider
         btnBuyNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(ProductDetailScreen.this, MyOrderScreen.class));
-                Toast.makeText(ProductDetailScreen.this, "Buy Options", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(ProductDetailScreen.this, SelectPaymentOptionScreen.class));
             }
         });
 

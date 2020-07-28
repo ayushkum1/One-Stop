@@ -21,7 +21,6 @@ import java.util.List;
 
 public class AddressScreen extends AppCompatActivity {
 
-    List<UserModel> userList = new ArrayList<>();
     List<AddressModel> addressList = new ArrayList<>();
     AddressAdapter adapter;
     RecyclerView rvAddress;
@@ -56,7 +55,6 @@ public class AddressScreen extends AppCompatActivity {
             }
         });
 
-        userList = userSampleData.getUserList();
         addressList = addressSampleData.getAddressList();
 
         adapter = new AddressAdapter(this, addressList);
